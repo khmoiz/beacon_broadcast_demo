@@ -76,7 +76,7 @@ class _MyHomePageState extends State<MyHomePage> {
               .setUUID(uuid)
               .setMajorId(int.parse(major))
               .setMinorId(int.parse(minor))
-              .setIdentifier('com.autoly.beacon')
+              .setIdentifier('com.ibeacon.autoly')
               .start();
           updateAdvertising();
         });
@@ -86,6 +86,8 @@ class _MyHomePageState extends State<MyHomePage> {
               .setUUID(uuid)
               .setMajorId(int.parse(major))
               .setMinorId(int.parse(minor))
+              .setManufacturerId(0x004C)
+              .setLayout("m:2-3=0215,i:4-19,i:20-21,i:22-23,p:24-24")
               .start();
           updateAdvertising();
         });
@@ -360,8 +362,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         keyboardType: TextInputType.text,
                         textAlign: TextAlign.center,
                         decoration: InputDecoration(
-                            helperText: "UUID",
-                            border: OutlineInputBorder()),
+                            helperText: "UUID", border: OutlineInputBorder()),
                       ),
                       TextFormField(
                         controller: majorController,
@@ -376,8 +377,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         keyboardType: TextInputType.number,
                         textAlign: TextAlign.center,
                         decoration: InputDecoration(
-                            helperText: "Major",
-                            border: OutlineInputBorder()),
+                            helperText: "Major", border: OutlineInputBorder()),
                       ),
                       TextFormField(
                         controller: minorController,
