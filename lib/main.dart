@@ -17,7 +17,6 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.purple,
         accentColor: Colors.purpleAccent,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: MyHomePage(title: 'Beacon BroadCast'),
     );
@@ -361,7 +360,6 @@ class _MyHomePageState extends State<MyHomePage> {
                         keyboardType: TextInputType.text,
                         textAlign: TextAlign.center,
                         decoration: InputDecoration(
-                            floatingLabelBehavior: FloatingLabelBehavior.always,
                             helperText: "UUID",
                             border: OutlineInputBorder()),
                       ),
@@ -378,7 +376,6 @@ class _MyHomePageState extends State<MyHomePage> {
                         keyboardType: TextInputType.number,
                         textAlign: TextAlign.center,
                         decoration: InputDecoration(
-                            floatingLabelBehavior: FloatingLabelBehavior.always,
                             helperText: "Major",
                             border: OutlineInputBorder()),
                       ),
